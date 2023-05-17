@@ -24,3 +24,10 @@ body {
 	margin: 0 auto;
 	
 }
+
+// TITLES
+.title {
+	@include fontStyleText(600, 36, 43, 36);
+	text-align: center;
+	color: $black;
+}

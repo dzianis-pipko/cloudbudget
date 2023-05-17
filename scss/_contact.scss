@@ -1,0 +1,111 @@
+.contact {
+	padding: rem(117) 0 rem(123);
+
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(30);
+		align-items: start;
+	}
+
+	&__left {}
+
+	&__title {
+		@include fontStyleText(600, 36, 43, 36);
+		color: $black;
+		margin-bottom: em(53, 36);
+		position: relative;
+		z-index: 2;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+
+			width: em(100, 36);
+			height: em(100, 36);
+			border: em(1, 36) dashed $gray2;
+			transform: translate(-4%, -50%);
+			z-index: 1;
+		}
+	}
+
+	&__desc {
+		@include fontStyleText(400, 14, 19.6, 14);
+		text-align: justify;
+		max-width: em(434, 14);
+		color: $black;
+	}
+
+	&__right {}
+
+	&__form {}
+}
+
+.form {
+	max-width: rem(540);
+
+	&__item-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		& > div {
+			width: rem(255);
+		}
+	}
+
+	&__item {
+		max-width: 100%;
+		margin-bottom: rem(24);
+	}
+
+	&__input {
+		@include fontStyleText(400, 16, 19, 16);
+		width: 100%;
+		height: em(60, 16);
+		border: em(1, 16) solid $gray2;
+		border-radius: em(6, 16);	
+		color: rgba(19, 39, 67, 0.5);
+		padding: 0 em(30, 16);
+
+		&::placeholder {
+			@include fontStyleText(400, 16, 19, 16);
+			color: rgba(19, 39, 67, 0.5);
+			opacity: 0.2;
+		}
+	}
+
+	&__select {}
+
+	&__button {
+		@include fontStyleText(400, 14, 17, 14);
+		text-transform: uppercase;
+		color: $white;
+		background-color: $rose;
+		padding: em(16,14) em(34, 14);
+		border: em(1.5, 14) solid $rose;
+		border-radius: em(6, 14);
+		transition: background-color .2s ease, color .4s ease, transform .4s ease;
+		position: relative;
+
+		&:hover {
+			background-color: $white;
+			color: $orange;
+			transform: translateY(em(2, 14));
+		}
+		
+	}
+}
+
+.select {
+	@include fontStyleText(400, 16, 19, 16);
+	width: 100%;
+	height: em(60, 16);
+	border: em(1, 16) solid $gray2;
+	border-radius: em(6, 16);
+	color: rgba(19, 39, 67, 0.5);
+	padding: 0 em(30, 16);
+
+	&__option {}
+}

@@ -3,9 +3,6 @@
 	padding: rem(63) 0 rem(124) 0;
 
 	&__title {
-		@include fontStyleText(600, 36, 43, 36);
-		text-align: center;
-		color: $black;
 		margin-bottom: em(63, 36);
 	}
 
@@ -72,5 +69,3 @@
 		color: $orange;
 	}
 }
-
-.container {}

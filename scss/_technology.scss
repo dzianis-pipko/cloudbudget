@@ -1,0 +1,41 @@
+.technology {
+	padding-top: rem(63);
+	padding-bottom: rem(104);
+
+	&__title {
+		margin-bottom: em(52, 36)
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(30);
+	}
+
+	&__item {
+		width: rem(255);
+		height: rem(266);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		padding: rem(30);
+	}
+
+	&__item-img {
+		margin-bottom: rem(8);
+	}
+
+	&__item-title {
+		@include fontStyleText(700, 18, 22, 18);
+		color: $black;
+		margin-bottom: em(10, 18);
+		text-align: center
+	}
+
+	&__item-desc {
+		@include fontStyleText(400, 12, 14, 12);
+		color: $black;
+		text-align: center
+	}
+}

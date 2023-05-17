@@ -1,0 +1,46 @@
+.intro {
+	width: 100%;
+	height: rem(782);
+	background: url(../img/intro-bg.jpg) bottom center / cover no-repeat;
+	padding-top: rem(257);
+
+	&__wrap {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center
+	}
+
+	&__title {
+		// @include fontStyleText($fw: 700, $fs: 72, $lhOne: 86, $lhTwo: 72);
+		@include fontStyleText(700, 72, 86, 72);
+		letter-spacing: em(3.6, 72);
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: em(39, 72);
+		
+	}
+
+	&__desc {
+		@include fontStyleText(600, 24, 36, 24);
+		max-width: em(520, 24);
+		color: $white;
+		text-align: center;
+		margin-bottom: em(39, 24);
+	}
+
+	&__btn {
+		@include fontStyleText(600, 14, 17, 14);
+		text-transform: uppercase;
+		color: $rose;
+		padding: em(17, 14) em(52, 14) em(16, 14);
+		background-color: $white;
+		border: em(1, 14) solid $white;
+		border-radius: em(6, 14);
+		transition: background-color .2s ease, color .4s ease;
+		&:hover {
+			background-color: transparent;
+			color: $white;
+		}
+	}
+}

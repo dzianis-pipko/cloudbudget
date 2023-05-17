@@ -1,0 +1,117 @@
+.header {
+	background: transparent;
+	position: absolute;
+	top: rem(17);
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: rem(50);
+		padding-bottom: rem(35);
+	}
+
+	&__logo-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-right: rem(30);
+	}
+
+	&__logo-img {
+		width: rem(24.65);
+		height: rem(17.4);
+		margin-right: rem(10);
+	}
+
+	&__logo-text {
+		@include fontStyleText(700, 18, 22, 18);
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&__nav {}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(20);
+	}
+
+	&__item {}
+
+	&__link {
+		display: inline-block;
+		@include fontStyleText(400, 14, 17, 14);
+		text-transform: uppercase;
+		color: $white;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: em(-4, 14);
+			width: 0;
+			height: em(1, 14);
+			background-color: $white;
+			transition: width .2s ease;
+		}
+		&:hover::before {
+			width: 100%;
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(28);
+	}
+
+	&__lang {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(10);
+	}
+
+	&__flag {
+		width: rem(32);
+		height: rem(32);
+	}
+
+	&__lang-text {
+		@include fontStyleText(400, 14, 17, 14);
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&__dropdown-wrap {
+		
+	}
+
+	&__dropdown {
+		width: rem(12.38);
+		height: rem(17.45);
+	}
+
+	&__btn {
+		@include fontStyleText(400, 14, 17, 14);
+		text-transform: uppercase;
+		color: $white;
+		border: em(1, 14) solid $white;
+		border-radius: em(6, 14);
+		padding: em(12, 14) em(28, 14);
+		background-color: transparent;
+		transition: background-color .2s ease, color .4s ease;
+		&:hover {
+			background-color: $white;
+			color: $rose;
+		}
+	}
+}

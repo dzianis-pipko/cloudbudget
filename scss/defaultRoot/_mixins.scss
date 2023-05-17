@@ -1,0 +1,7 @@
+@mixin fontStyleText($fw, $fs, $lhOne, $lhTwo) {
+	font-weight: $fw;
+	font-size: rem($fs);
+	line-height: prc($lhOne, $lhTwo);
+}
+
+// @include fontStyleText($fw: 700, $fs: 72, $lhOne: 86, $lhTwo: 72);

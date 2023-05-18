@@ -1,0 +1,84 @@
+.footer {
+	padding: rem(85) 0;
+	background-color: $gray-light;
+
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(20);
+	}
+
+	&__item {}
+
+	&__title {
+		@include fontStyleText(700, 18, 22, 18);
+		margin-bottom: em(23, 18);
+		color: $black;
+	}
+
+	&__desc {
+		@include fontStyleText(400, 14, 19.6, 14);
+		color: $black;
+		max-width: em(188, 14);
+	}
+
+	&__list {}
+
+	&__link {
+		@include fontStyleText(400, 12, 19.2, 12);
+		color: $black;
+	}
+
+	&__address {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__address-link {
+		@include fontStyleText(400, 12, 14, 12);
+		color: $black;
+		margin-bottom: em(11, 12);
+
+		&:last-child{
+			margin-bottom: em(20, 12);
+		}
+	}
+	
+
+	&__socialMedia-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(12);
+	}
+
+	&__socialMedia-link {
+	}
+
+	&__socialMedia-ico {
+		width: rem(14);
+		height: rem(14);
+	}
+
+	&__services {
+		display: inline-block;
+		width: rem(216);
+		padding: 0 0 rem(31) 0;
+		position: relative;
+	}
+
+	&__services-img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+
+	&__copyright {
+		@include fontStyleText(400, 12, 14, 12);
+		color: $black;
+		margin-top: rem(86);
+	}
+}
